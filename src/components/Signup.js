@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { useHistory, Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 const Signup = () => {
 
@@ -9,8 +9,7 @@ const Signup = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const { name, email, password } = credentials;
-        const response = await fetch('http://localhost:7000/api/auth/createUser', {
+        const response = await fetch('https://second-deploy-taxcalc.herokuapp.com/api/auth/createUser', {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
@@ -67,13 +66,7 @@ const Signup = () => {
                 <button type="submit" value="Submit">Submit</button>
             </form>
 
-            <div className="drops">
-                <div className="drop drop-1"></div>
-                <div className="drop drop-2"></div>
-                <div className="drop drop-3"></div>
-                <div className="drop drop-4"></div>
-                <div className="drop drop-5"></div>
-            </div>
+            
         </div>
     </>;
 };
