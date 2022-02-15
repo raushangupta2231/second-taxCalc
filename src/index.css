@@ -496,5 +496,6 @@ button:focus {
   }
   #btn-abt{
     width: 6rem;
+    font-size: 0.8rem;
   }
 }
